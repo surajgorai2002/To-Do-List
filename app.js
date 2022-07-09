@@ -1,11 +1,12 @@
 //for ejs layout <%- include('header'); -%>   
 //  header should be in views folder
+console.log("Database_URL", process.env.DATABASE_URL);
 const express=require("express");
 const https=require("https");
 const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
 const _=require("lodash");
-const date= require(__dirname +"/date.js")
+const date= require(__dirname +"/date.js");
 const app=express();
 app.set('view engine', 'ejs');
 mongoose.connect("mongodb+srv://admin-suraj:passpass@cluster0.w3bpi5t.mongodb.net/todolistDB",{useNewUrlParser:true});
