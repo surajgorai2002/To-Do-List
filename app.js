@@ -138,6 +138,6 @@ app.post("/",function(req,res){
    }
  
 })
-app.listen(3000,function(req,res){
+app.listen(process.env.PORT || 3000,function(req,res){
     console.log("started");
 })
